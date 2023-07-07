@@ -113,16 +113,16 @@ Some tricks in dealing with white box testing is to ensure that tests cover all 
 ### Let us now briefly discuss other useful testing techniques that you will come across.
 1. **Equivalence Partitioning Testing** - This approach is used in black box testing in which, a range of values, inputs, or outputs are divided into two partitions: valid and invalid partitions. The valid partition consists of values or inputs that are accepted by the test object as valid from the specifications. The invalid partition consists of a set of test values or inputs that are invalid and should produce unintended outcomes or errors.
 2. **Boundary Value Analysis** - This is a black box technique that extends equivalence partitioning. The tester focuses on the values at the boundary of valid and invalid partitions. Boundary value analysis can take two forms, two-value and three-value analysis. In two-value analysis, the test examines the minimum and maximum values of the boundary, while in three-value analysis the test focuses on the value before the boundary, at the boundary, and just after the boundary. In most cases, boundary value analysis and equivalence partitioning are used together to increase test coverage.
-3. **Decision Table testing** - The decision table testing involves testing the behavior of the code, system, or text object in presence of different combinations of inputs. In this approach to testing, there are predefined rules, cases, or conditions that are required for the test object. For example, a login functionality that accepts a valid password and a valid username has two predefined possible outcomes, the home screen after successful login, and the error screen if details are wrong. A decision table can be used to design tests using different combinations of password and username through cause-effect table as follows.
+   1. **Decision Table testing** - The decision table testing involves testing the behavior of the code, system, or text object in presence of different combinations of inputs. In this approach to testing, there are predefined rules, cases, or conditions that are required for the test object. For example, a login functionality that accepts a valid password and a valid username has two predefined possible outcomes, the home screen after successful login, and the error screen if details are wrong. A decision table can be used to design tests using different combinations of password and username through cause-effect table as follows.
 
-   | Condition   | test-1 | test-2 | test-3 | test-4 |
-       |-------------|--------|--------|--------|--------|
-   | username    | True   | False  | False  | True   |
-   | Password    | False  | False  | True   | True   |
-   | Home screen | False  | False  | False  | True   |
+| Condition   | test-1 | test-2 | test-3 | test-4 | 
+|-------------|--------|--------|--------|--------|
+| username    | True   | False  | False  | True   |
+| Password    | False  | False  | True   | True   |
+| Home screen | False  | False  | False  | True   |
 
-   The decision table testing is very effective for evaluation of code that integrates business logic.
-4. **State transition testing** - It is a software testing technique that focuses on testing the behavior of a system or software application as it transitions between different states. It is particularly useful for systems that have distinct states and where the behavior depends on the current state and the transitions between states.
+      The decision table testing is very effective for evaluation of code that integrates business logic.
+3. **State transition testing** - It is a software testing technique that focuses on testing the behavior of a system or software application as it transitions between different states. It is particularly useful for systems that have distinct states and where the behavior depends on the current state and the transitions between states.
     <details>
     <summary>To understand better, let us use an illustrative analogy of the ATM.</summary>
     Initially, the ATM is in the `state` of idleness that is just displaying a default screen. This state changes when an ATM card is entered. Entering the ATM card triggers an `event` that changes the initial state. Each user action, triggers an event, that triggers a system event. For example, when the user enters their PIN, the ATM initiates a system event that verifies the PIN is correct. Therefore, the _state transition testing_ involves testing the system while in different states.</details>
